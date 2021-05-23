@@ -4,28 +4,28 @@ const request = require('request');
 
 const getUrl = (type, string) => {
     if (string === undefined || string === '') {
-      throw new TypeError("Please Provide A Tag")
+      throw new TypeError("Please Provide A Tag ")
     } else {
         string = `${string}`;
     }
       if (type === undefined || type === '') {
-      throw new TypeError("Type Is Undefined")
+      throw new TypeError("Type Is Undefined ")
     } else {
-if(type == "player"){ // players
+if(type.toLowerCase() == "player"){ // players
 
   type = ``
 }else {
-if(type == "clubs"){ // clubs
+if(type.toLowerCase() == "clubs"){ // clubs
  type="clubs/"
-}else if(type == "rankings/players"){ //rankings/players
+}else if(type.toLowerCase() == "rankings/players"){ //rankings/players
   type="rankings/players/"
-}else if(type == "rankings/clubs"){ // rankings/clubs
+}else if(type.toLowerCase() == "rankings/clubs"){ // rankings/clubs
   type = "rankings/clubs/"
-}else if(type == "v1/brawlers"){ // v1/brawlers
+}else if(type.toLowerCase() == "v1/brawlers"){ // v1/brawlers
   type="v1/brawlers/"
-}else if(type == "v1/battlelog"){ // v1/battlelog
+}else if(type.toLowerCase() == "v1/battlelog"){ // v1/battlelog
   type="v1/battlelog/"
-}else if(type == "brawlers"){ // brawlers
+}else if(type.toLowerCase == "brawlers"){ // brawlers
   type ="brawlers/"
 }
 
