@@ -1,7 +1,7 @@
 {
   "name": "bsapi.js",
-  "version": "1.0.1",
-  "description": "Get Your BrawlStars Stats Easity ",
+  "version": "1.0.6",
+  "description": "Get Your BrawlStars Stats Easily With bsapi.js. Imagine An NPM Package.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/brawlie/bs-api#readme",
   "dependencies": {
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "ws": "^7.4.5"
   }
 }
