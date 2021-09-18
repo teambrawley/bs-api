@@ -58,6 +58,7 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
    console.log(res)
    }).catch(err => console.log(err))
   ```
+  
  `Get` Current Event Rotation ( Async / Await )
  
    ```js
