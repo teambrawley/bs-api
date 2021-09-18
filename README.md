@@ -51,12 +51,12 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
 ```
 
 - #### Example Usage
- `Get` A Player's In-Game Profile Information
-  ```js
-  bs.get('player','82PGQVJ2L').then(res => {
-  console.log(res)
-  }).catch(err => console.log(err))
- ```
+  `Get` A Player's In-Game Profile Information
+   ```js
+   bs.get('player','82PGQVJ2L').then(res => {
+   console.log(res)
+   }).catch(err => console.log(err))
+  ```
  `Get` Current Event Rotation ( Async / Await )
  ```js
 (async () => {
