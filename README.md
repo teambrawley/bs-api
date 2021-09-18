@@ -12,7 +12,8 @@ npm install bsapi.js
  Version v2.0.0 ( Major Update )
 > 
 - Bug Fixes 
-- Added cli
+- Added CLI
+- Added New Response Type ( clublog )
 
 ### Types 
 
@@ -67,6 +68,16 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
    console.log(await bs.get('events'));
    })();
    ```
+  `WebSocket` To Get Battlelogs
+ 
+   ```js
+   bs.ws({
+   type: 'battlelog',
+   tag: '82PGQVJ2L'
+   }, (err, data) => {
+    console.log(err, data)
+   })
+   ```
    
 ### Tag Validator 
 This function allows you to validate a Brawl Stars Tag
@@ -89,7 +100,7 @@ npm install -g bsapi.js
   **For CLI options, use the help command or `-h` (or `--help`) argument :**
   
   ```
-  bs help
+  $ bs help
   ```
 
 ### License 
