@@ -30,4 +30,3 @@ if(response.data.message == '404 Not Found'){
 
 
 module.exports = validator 
-
