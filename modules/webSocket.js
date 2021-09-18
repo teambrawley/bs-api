@@ -1,4 +1,3 @@
-
 'use strict';
 const WebSocket = require('ws')
 const ws = new WebSocket('wss://wscr.is-a.dev');
@@ -12,7 +11,7 @@ ws.onopen = function open() {
 };
 
  ws.onmessage = function incoming(message) {
-   resolve(JSON.parse(message.data)) 
+   resolve({type:'ws-player',data:JSON.parse(message.data)}) 
 };
 })
 
