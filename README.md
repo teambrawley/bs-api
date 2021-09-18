@@ -51,6 +51,7 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
 ```
 
 - #### Example Usage
+  >
   `Get` A Player's In-Game Profile Information
   
    ```js
