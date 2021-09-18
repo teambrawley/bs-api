@@ -4,22 +4,23 @@ An npm package that can interact with [bs-api](https://cr.is-a.dev) easily.
 
 
 ### Install 
-`npm i bsapi.js`
+```
+npm install bsapi.js
+```
 
 ### Updates
- Version v1.0.9
+ Version v2.0.0 ( Major Update )
 > 
 - Bug Fixes 
-- Replaced [request](https://npmjs.com/request) with [axios](https://npmjs.com/axios)
-- Developing cli
+- Added cli
 
 ### Types 
 
 | Request Types | Description |
 | --------------|----------------|
-| `get` | Uses Get Function To Request Data |
-| `post` | Uses Post Function To Request Data |
-| `ws` | Uses WebSocket To Request Data ( `player type` ) |
+| `get` | Uses Get Method To Request Data |
+| `post` | Uses Post Method To Request Data |
+| `ws` | Uses WebSocket To Receive Data ( `player type` ) |
 
 ______________________________________
 
@@ -41,29 +42,50 @@ ______________________________________
 ```js
 const bs = require('bsapi.js')
 
-bs.<Request_Type>('Type','String').then((response) => {})
+bs.<Request_Type>('<Type>','<TAG>').then(res => {
 
-//String CAN'T BE BLANK Instead Use Something Like <#> Or </> , For Types Like <events> 
+  // Handle Datas
+
+}).catch(err => // Handle Errors )
+
 ```
 
 - #### Example Usage
-`Get` A Player's In-Game Profile Information
-```js
-const bs = require('bsapi.js')
-
-bs.get('player','82PGQVJ2L').then((response) => {
-  console.log(response)
-})
-```
-
+ `Get` A Player's In-Game Profile Information
+  ```js
+  bs.get('player','82PGQVJ2L').then(res => {
+  console.log(res)
+  }).catch(err => console.log(err))
+ ```
+ `Get` Current Event Rotation ( Async / Await )
+ ```js
+(async () => {
+  console.log(await bs.get('events'));
+})();
+  ```
 ### Tag Validator 
 This function allows you to validate a Brawl Stars Tag
 ```js
 const { validator } = require('bsapi.js')
-...
-await validator('player', '<#TAG>')
+// ... ( async )
+await validator('<Type>', '<#TAG>')
 ```
-*this function must be used inside an async function otherwise it won't work*
+*supported types : `club`, `player`, `brawler`*
+
+### CLI
+Interact with bs-api through cli.
+```
+npm install -g bsapi.js
+```
+*to use cli, you'll have to install this package globally*
+
+- ### Usage
+  ---
+  **For CLI options, use the help command or `-h` (or `--help`) argument :**
+  
+  ```
+  bs help
+  ```
 
 ### License 
 ```Apache-2.0```
