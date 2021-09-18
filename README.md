@@ -51,7 +51,7 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
 ```
 
 - #### Example Usage
-  >
+  
   `Get` A Player's In-Game Profile Information
   
    ```js
@@ -60,12 +60,12 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
    }).catch(err => console.log(err))
   ```
   
- `Get` Current Event Rotation ( Async / Await )
+  `Get` Current Event Rotation ( Async / Await )
  
-  ```js
-  (async () => {
+   ```js
+   (async () => {
    console.log(await bs.get('events'));
-    })();
+   })();
    ```
    
 ### Tag Validator 
