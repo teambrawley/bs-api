@@ -1,7 +1,9 @@
-
 /*api-bs*/
 'use strict';
-exports.get = require('./modules/get.js').get;
+
+const utils = require('./modules/utils/utils.js');
+
+exports.get = require('./modules/get.js');
 
 exports.post = require('./modules/post.js');
 
@@ -9,7 +11,9 @@ exports.ws = require('./modules/webSocket.js');
 
 exports.validator = require('./modules/validator.js');
 
-exports.regex = require('./modules/regex.js');
+exports.regex = utils.regex;
+
+exports.utils = utils;
 
 exports.version = require('./package.json').version;
 /* LICENSE 
