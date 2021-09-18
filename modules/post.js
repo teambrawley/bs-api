@@ -1,6 +1,6 @@
 'use strict';
 
-const request = require('request');
+const axios = require('axios');
 
 const getUrl = (type, string) => {
     if (string === undefined || string === '') {
@@ -27,6 +27,8 @@ if(type.toLowerCase() == "clubs"){ // clubs
   type="v1/battlelog/"
 }else if(type.toLowerCase == "brawlers"){ // brawlers
   type ="brawlers/"
+}else if(type.toLowerCase == "events"){ // brawlers
+  type ="v1/events/"
 }
 
 else {
@@ -39,31 +41,29 @@ else {
 
 const getJson = url =>
     new Promise((resolve, reject) => {
-        let requestOpts = {
-            url: url,
-            json: true,
-            headers: { 'User-agent': 'request' },
+       let requestOpts = {
+            headers: { 'User-agent': 'bsapi.js' },
         };
 
-        request.post(requestOpts, (err, res, data) => {
-            if (err) {
-                reject(err);
-            } else if (res.statusCode !== 200) {
-                reject(res.statusCode);
+        axios.post(url, requestOpts).then(res => {
+           if (res.status !== 200) {
+              reject(res.status);
             } else {
-                resolve(data);
+               resolve(res.data);
             }
-        });
+        }).catch(err => {
+          reject(err);
+        })
     });
 
-const get = (type, string) =>
+const post = (type, string) =>
     new Promise((resolve, reject) => {
         let url = getUrl(type, string);
         getJson(url)
             .then(data => {
               const dt = data
                 resolve({
-                    type: "get-"+type,
+                    type: "post-"+type,
                  data: dt, 
                 });
             })
@@ -72,4 +72,4 @@ const get = (type, string) =>
             });
     });
 
-module.exports = get
+module.exports = post
