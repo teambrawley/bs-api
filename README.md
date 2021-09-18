@@ -106,6 +106,11 @@ npm install -g bsapi.js
 ### License 
 ```Apache-2.0```
 
+- ### Links
+
+  - [Docs](https://bsapi.is-a.dev)
+  - [Repository](https://github.com/brawlie/bs-api)
+  
 - ### Contributors
 
   - [@joeleeofficial](https://github.com/joeleeofficial)
