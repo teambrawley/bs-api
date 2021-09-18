@@ -61,11 +61,11 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
   
  `Get` Current Event Rotation ( Async / Await )
  
-   ```js
-   (async () => {
+     ```js
+     (async () => {
      console.log(await bs.get('events'));
-   })();
-   ```
+      })();
+     ```
 ### Tag Validator 
 This function allows you to validate a Brawl Stars Tag
 ```js
