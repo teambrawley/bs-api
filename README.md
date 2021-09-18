@@ -52,17 +52,19 @@ bs.<Request_Type>('<Type>','<TAG>').then(res => {
 
 - #### Example Usage
   `Get` A Player's In-Game Profile Information
+  
    ```js
    bs.get('player','82PGQVJ2L').then(res => {
    console.log(res)
    }).catch(err => console.log(err))
   ```
  `Get` Current Event Rotation ( Async / Await )
- ```js
-(async () => {
-  console.log(await bs.get('events'));
-})();
-  ```
+ 
+   ```js
+   (async () => {
+     console.log(await bs.get('events'));
+   })();
+   ```
 ### Tag Validator 
 This function allows you to validate a Brawl Stars Tag
 ```js
