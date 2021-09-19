@@ -1,5 +1,7 @@
 const get = require('./../get.js');
 const fs = require('fs');
+const version = require('./../../package.json').version;
+const utils = require('./utils.js');
 
 const clubCli = async(option1, option2, option3, Table, chalk) => {
   var table = new Table({
@@ -200,4 +202,29 @@ if(!option2)return console.log(chalk`
   }
 }
 
-module.exports = { playerCli, clubCli, eventCli };
+
+const versionCli = async(option1, option2, option3, Table, chalk) => {
+  try{
+ const res = await utils.axios.get('https://registry.npmjs.com/bsapi.js')
+const latestVersion = res.data['dist-tags'].latest;
+     if(version < latestVersion){
+      console.log(chalk`
+      Update Available {grey ${version}} → {green ${latestVersion}} 
+      Run {cyan npm i -g bsapi.js@latest} To Update
+      `)
+         }else {
+       console.log(chalk`
+    {green You're Using The Latest Version Of} {magenta bsapi.js} {blue (${latestVersion})}
+        `)
+  
+                }
+  }catch(e){
+    console.log(chalk`
+      Failed To Check For Updates
+    `)
+  }
+
+}
+
+
+module.exports = { playerCli, clubCli, eventCli, versionCli };
