@@ -9,7 +9,7 @@ npm install bsapi.js
 ```
 
 ### Updates
- Version v2.0.0 ( Major Update )
+ Version v2.0.5 ( Major Update )
 > 
 - Bug Fixes 
 - Added CLI
