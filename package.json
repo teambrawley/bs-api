@@ -1,6 +1,6 @@
 {
   "name": "bsapi.js",
-  "version": "1.0.9",
+  "version": "2.0.5",
   "description": "Get Your Brawl Stars Statistics Easily With bsapi.js",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,10 @@
     "bs-api",
     "bs",
     "brawlstars",
-    "api"
+    "api",
+    "cli"
   ],
-  "author": "JoeLeeOfficial <tojoeleeofficial@gmail.com>",
+  "author": "Joe Lee <tojoeleeofficial@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/brawlie/bs-api/issues"
