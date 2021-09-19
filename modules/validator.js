@@ -1,4 +1,4 @@
-const axios = require('axios')
+const axios = require('./utils/utils.js').axios;
 
 
 async function validator(types, value){
@@ -16,13 +16,13 @@ if(types.toLowerCase().startsWith('player')){
   return false
 }
 
-const response = await axios.get(`https://cr.is-a.dev${type}/${value}`)
+const response = await axios.get(`https://cr.is-a.dev${type}/${value}`);
 
 if(response.data){
 if(response.data.message == '404 Not Found'){
-   return 'false'
+   return false;
 }else {
-  return 'true'
+  return true;
 }
 }
 }
