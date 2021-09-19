@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const { spawn } = require('child_process');
 
 const command = process.argv[2];
@@ -6,7 +7,7 @@ const option2 = process.argv[4];
 const option3 = process.argv[5];
 
 const chalk = require('chalk');
-const { playerCli, clubCli, eventCli } = require('./utils/getStats.js');
+const { playerCli, clubCli, eventCli, versionCli } = require('./utils/getStats.js');
 const Table = require('./utils/table.js');
 const { help, helpProfile, helpClub, helpEvents } = require('./utils/utils.js');
 
@@ -62,6 +63,12 @@ switch(command){
   case "event":
   case "events":
   await eventCli(option1, option2, option3, Table, chalk);
+  break;
+   
+  case "version":
+  case "-v": 
+  case "--version":
+  await versionCli(option1, option2, option3, Table, chalk);
   break;
 
   default: console.log(`
