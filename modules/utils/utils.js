@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-
 exports.repeat = function (str, times) {
   return Array(times + 1).join(str)
 }
@@ -127,7 +126,8 @@ function options (defaults, opts) {
 
   return defaults
 };
-exports.options = options
+exports.options = options;
+exports.axios = axios;
 
 exports.strlen = function (str) {
   var code = /\u001b\[(?:\d*;){0,5}\d*m/g
