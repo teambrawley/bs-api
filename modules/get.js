@@ -1,3 +1,8 @@
+/*!
+ * bsapi.js
+ * (c) 2021 Joe Lee
+ * Released under the Apache-2.0 License.
+ */
 'use strict';
 
 const { getJson, getUrl } = require('./utils/utils.js');
