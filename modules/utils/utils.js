@@ -1,3 +1,9 @@
+/*!
+ * bsapi.js
+ * (c) 2021 Joe Lee
+ * Released under the Apache-2.0 License.
+ */
+
 const axios = require('axios');
 
 exports.repeat = function (str, times) {
@@ -136,9 +142,10 @@ exports.strlen = function (str) {
   return split.reduce(function (memo, s) { return (s.length > memo) ? s.length : memo }, 0)
 }
 
-exports.regex = (string) => {
-  if(string.length < 9)return false;
-  var patt = new RegExp('^(#)'+'([/L|J|G|C|V|P|G|Q|Y|U|R|8|0|2|9/i])');
+exports.regexp = (string) => {
+  if(string.length < 6)return false;
+  // RegExp Scheme
+  var patt =  new RegExp(/(#)[0289CGJLPOQRUVY]{3,}/gmi);
   var result = patt.test(string);
   return result;
 }
