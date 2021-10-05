@@ -20,6 +20,12 @@ Run bs -h, help to view all available commands and options
 `);
 }
 
+/*!
+ * bsapi.js
+ * (c) 2021 Joe Lee
+ * Released under the Apache-2.0 License.
+ */
+
 
 
 
