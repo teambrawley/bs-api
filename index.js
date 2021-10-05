@@ -1,4 +1,8 @@
-/*api-bs*/
+/*!
+ * bsapi.js
+ * (c) 2021 Joe Lee
+ * Released under the Apache-2.0 License.
+ */
 'use strict';
 
 const utils = require('./modules/utils/utils.js');
@@ -11,15 +15,15 @@ exports.ws = require('./modules/webSocket.js');
 
 exports.validator = require('./modules/validator.js');
 
-exports.regex = utils.regex;
+exports.regexp = utils.regexp;
 
 exports.utils = utils;
 
 exports.version = require('./package.json').version;
 /* LICENSE 
-   Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+                        Apache License
+                 Version 2.0, January 2004
+              http://www.apache.org/licenses/
 
    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
