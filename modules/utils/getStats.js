@@ -1,3 +1,10 @@
+/*!
+ * bsapi.js
+ * (c) 2021 Joe Lee
+ * Released under the Apache-2.0 License.
+ */
+'use strict';
+
 const get = require('./../get.js');
 const fs = require('fs');
 const version = require('./../../package.json').version;
