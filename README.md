@@ -9,11 +9,10 @@ npm install bsapi.js
 ```
 
 ### Updates
- Version v2.0.5 ( Major Update )
+ Version v2.0.6
 > 
 - Bug Fixes 
-- Added CLI
-- Added New Response Type ( clublog )
+- Fixed Tag Validator `Regexp`
 
 ### Types 
 
@@ -21,7 +20,7 @@ npm install bsapi.js
 | --------------|----------------|
 | `get` | Uses Get Method To Request Data |
 | `post` | Uses Post Method To Request Data |
-| `ws` | Uses WebSocket To Receive Data ( `player type` ) |
+| `ws` | Uses WebSocket To Receive Data |
 
 ______________________________________
 
@@ -86,7 +85,15 @@ const { validator } = require('bsapi.js')
 // ... ( async )
 await validator('<Type>', '<#TAG>')
 ```
-*supported types : `club`, `player`, `brawler`*
+*supported types : `club`, `player`, `brawlers`*
+
+Or Use Regexp ( Only Validates Tag Pattern, Doesn't Tell If Its Exist )
+```js
+const { regexp } = require('bsapi.js');
+// Returns Boolean ( true / false )
+regexp('<#TAG>')
+```
+*supported types : `club`, `player`, `map`*
 
 ### CLI
 Interact with bs-api through cli.
@@ -97,7 +104,7 @@ npm install -g bsapi.js
 
 - ### Usage
   ---
-  **For CLI options, use the help command or `-h` (or `--help`) argument :**
+  **To learn more about CLI options/commands, run the help command or `-h` (or `--help`) argument :**
   
   ```
   $ bs help
@@ -118,3 +125,10 @@ npm install -g bsapi.js
 
 - ### Disclaimer
   - See [Supercell's Fan Content Policy](https://supercell.com/en/fan-content-policy/)
+
+
+<!--
+ * bsapi.js
+ * (c) 2021 Joe Lee
+ * Released under the Apache-2.0 License.
+ -->
