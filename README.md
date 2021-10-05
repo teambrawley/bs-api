@@ -122,6 +122,7 @@ npm install -g bsapi.js
 
   - [@joeleeofficial](https://github.com/joeleeofficial)
   - [@teambrawley](https://github.com/brawlie)
+  - [@w3cy](https://github.com/w3cy)
 
 - ### Disclaimer
   - See [Supercell's Fan Content Policy](https://supercell.com/en/fan-content-policy/)
