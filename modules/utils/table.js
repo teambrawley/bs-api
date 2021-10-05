@@ -1,3 +1,11 @@
+/*!
+ * bsapi.js/cli-table
+ * Copyright (c) 2011-2017 Automattic
+ * Copyright (c) 2017 Keymetrics
+ * github.com/Keymetrics/cli-table
+ * Released under the MIT License.
+ */
+
 var colors = require('chalk')
 var utils = require('./utils.js')
 var repeat = utils.repeat
