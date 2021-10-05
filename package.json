@@ -1,6 +1,6 @@
 {
   "name": "bsapi.js",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Get Your Brawl Stars Statistics Easily With bsapi.js",
   "main": "index.js",
   "scripts": {
