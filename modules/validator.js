@@ -1,5 +1,9 @@
+/*!
+ * bsapi.js
+ * (c) 2021 Joe Lee
+ * Released under the Apache-2.0 License.
+ */
 const axios = require('./utils/utils.js').axios;
-
 
 async function validator(types, value){
 if(!types)return new Error('Type Must Be Defined');
